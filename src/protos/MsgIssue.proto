@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+// MsgIssue defines message to issue new fungible token.
+message MsgIssue {
+  string issuer = 1;
+  string symbol = 2;
+  string subunit = 3;
+  uint32 precision = 4;
+  string initial_amount = 5;
+  string description = 6;
+  repeated Feature features = 7;
+  // burn_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+  // burn_amount. This value will be burnt on top of the send amount.
+  string burn_rate = 8;
+  // send_commission_rate is a number between 0 and 1 which will be multiplied by send amount to determine
+  // amount sent to the token issuer account.
+  string send_commission_rate = 9;
+}
+
+enum Feature {
+  minting = 0;
+  burning = 1;
+  freezing = 2;
+  whitelisting = 3;
+  ibc = 4;
+}

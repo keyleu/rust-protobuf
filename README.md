@@ -1,10 +1,4 @@
-# rust-protobuf-example
-
-Example rust protobuf project
-
-## Motivation
-
-Simple and obvious examples for using `rust-protobuf` module were lacking, so this was created.
+# rust-protobuf
 
 ## Dependencies
 
@@ -29,9 +23,4 @@ Key files to read are:
 Standard rust package:
 ```
 $ cargo build
-$ cargo run
 ```
-
-## Contributions
-
-Contributions are welcome. File an issue or PR.
